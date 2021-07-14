@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "development") {
 const PORT = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === "production") {
-  const root = path.join("build");
+  const root = path.join("../client", "build");
   app.use(express.static(root));
 
   app.get("*", (req, res) => res.sendFile("index.html", { root }));
